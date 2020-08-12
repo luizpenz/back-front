@@ -1,0 +1,14 @@
+version: '3'
+services: 
+  frontend-client:
+    image: luizpenz/frontend-client:1.0.0
+    ports:
+      - "80:80"
+    links:
+      - backend-api
+
+  backend-api:
+    image: luizpenz/backend-api:1.0.0
+    ports:
+      - "8080:8080"
+    container_name: backend-api
